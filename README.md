@@ -1,1 +1,1 @@
-# testnews
+# news.com
