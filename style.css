@@ -43,7 +43,7 @@ html,body{
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 8px;
+  margin-bottom: 0; /* FIXED */
 }
 
 .logo-container img {
@@ -148,8 +148,8 @@ Overlay for mobile
 .news-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1.5rem;
-  padding: 2rem;
+  gap: 0;
+  padding:0 ;
 }
 
 /* Featured News Card (Large, Right Side) */
@@ -189,6 +189,7 @@ Overlay for mobile
   border-radius: 10px;
   box-shadow: 0 2px 12px rgba(0,0,0,0.12);
   margin: 30px auto;
+  margin-top: 3px;
   overflow: hidden;
   transition: box-shadow 0.3s;
   border: 1px solid #eaeaea;
@@ -208,16 +209,16 @@ Overlay for mobile
 }
 
 .news-content {
-  padding: 20px;
+  padding: 10px;
 }
 
 .news-content h2 {
-  font-size: 1.3em;
+  font-size: .9em;
   margin: 0 0 12px 0;
 }
 
 .news-content p {
-  font-size: 1.1em;
+  font-size: .7em;
   color: #444;
   margin-bottom: 10px;
 }
@@ -532,3 +533,218 @@ body, html {
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
+/* 🔝 Top Bar */
+.top-bar {
+  background: #be181a;
+  color: white;
+  text-align: center;   /* sab center */
+  padding: 8px 0;
+}
+
+.top-links a {
+  color: white;
+  margin-left: 10px;
+  text-decoration: none;
+}
+
+.top-links a:hover {
+  text-decoration: underline;
+}
+#time {
+  display: block;
+  font-size: 16px;
+  margin-top: 5px;
+}
+.top-links {
+  margin-top: 5px;
+}
+
+.top-links a {
+  color: white;
+  margin: 0 8px;  /* left-right spacing */
+  text-decoration: none;
+}
+.news-ticker {
+  display: flex;
+  align-items: center;
+  background: white;
+  border-top: 1px solid #ccc;
+  overflow: hidden;
+}
+
+/* Breaking label */
+.breaking {
+  background: red;
+  color: white;
+  padding: 8px 12px;
+  font-weight: bold;
+}
+
+/* Moving text */
+.ticker-text {
+  flex: 1;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Animation */
+.ticker-text p {
+  display: inline-block;
+  white-space: nowrap;
+  padding-left: 100%;
+  animation: scrollText 15s linear infinite;
+}
+
+/* Keyframes */
+@keyframes scrollText {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+.news-ticker {
+  margin-top: 0;
+  padding: 3px 0;   /* choti height */
+}
+.site-header {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+.news-ticker {
+  background: #eee;   /* light grey (white line jaisa) */
+  overflow: hidden;
+  height: 30px;       /* thin line */
+  display: flex;
+  align-items: center;
+}
+
+.ticker-text {
+  width: 100%;
+  overflow: hidden;
+}
+
+.ticker-text p {
+  display: inline-block;
+  white-space: nowrap;
+  padding-left: 100%;
+  animation: tickerMove 20s linear infinite;
+}
+
+/* Smooth continuous scroll */
+@keyframes tickerMove {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+.news-ticker {
+  background: #eee;
+  overflow: hidden;
+  height: 30px;
+  display: flex;
+  align-items: center;
+}
+
+/* moving track */
+.ticker-track {
+  display: flex;
+  width: max-content;
+  animation: scrollLoop 15s linear infinite;
+}
+
+/* text style */
+.ticker-track span {
+  white-space: nowrap;
+  padding-right: 50px;
+}
+
+/* animation */
+@keyframes scrollLoop {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+
+.news-ticker {
+  background: #eee;
+  overflow: hidden;
+  height: 30px;
+  display: flex;
+  align-items: center;
+}
+
+.ticker-track {
+  display: flex;
+  width: max-content;
+  animation: scrollLoop 12s linear infinite;
+}
+
+.ticker-track span {
+  white-space: nowrap;
+  padding-right: 50px;
+}
+
+/* 🔥 MAIN FIX */
+@keyframes scrollLoop {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+
+
+
+
+
+
+.news-ticker {
+  background: #eee;
+  overflow: hidden;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.ticker-text {
+  position: absolute;
+  white-space: nowrap;
+  animation: moveText 25s linear infinite;
+}
+
+/* 🔥 RIGHT se LEFT aur phir repeat */
+@keyframes moveText {
+  0% {
+    left: -100%;   /* screen ke bahar right */
+  }
+  100% {
+    left: 100%;    /* left side se nikal jaye */
+  }
+}
+.site-header {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+.main-content,
+.main-wrapper,
+.news-grid {
+  margin-top: 0;
+  padding-top: 0;
+}
+.news-ticker {
+  margin-bottom: 0;
+}
+* {
+  margin-top: 0;
+}
