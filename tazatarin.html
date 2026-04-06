@@ -23,30 +23,45 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
- <header class="site-header">
+<header class="site-header">
+
+  <!-- 🔝 TOP BAR -->
+ 
+  <!-- 🟥 LOGO -->
   <div class="logo-container">
-        <button id="menuBtn" class="menu-btn" aria-label="مینیو کھولیں">☰</button>
-    <img src="logo-removebg-preview.png" alt="Jinnah Times Logo" />
+    <button id="menuBtn" class="menu-btn">☰</button>
+    <img src="logo-removebg-preview.png" alt="Logo" />
   </div>
+ <div class="top-bar"> 
+    <div id="time"></div> 
+
+    <div class="top-links">
+      <a href="#">صفحۂ اول|</a>
+      <a href="#">   رابطہ کریں|  </a>
+      <a href="#">انٹرنیشنل</a>
+    </div>
+  </div>
+
+  <!-- 📌 NAVBAR -->
   <nav class="main-navbar">
     <ul>
-      <li><a href="index.html">صفحۂ اول</a></li>
-      
-      
-      
-     <li><a href="tazatarin.html" class="active">تازہ ترین</a></li>
-
-      <li><a href="pakistan.html"  >پاکستان</a></li>
+      <li><a href="#" class="active">صفحۂ اول</a></li>
+      <li><a href="tazatarin.html">تازہ ترین</a></li>
+      <li><a href="pakistan.html">پاکستان</a></li>
       <li><a href="#">انٹرنیشنل</a></li>
       <li><a href="#">کھیل</a></li>
       <li><a href="#">شوبز</a></li>
-      <li><a href="#">ویڈیوز</a></li>
-      <li><a href="#">مزید</a></li>
     </ul>
-    <!-- Hamburger for mobile only -->
-
   </nav>
+
 </header>
+<div class="news-ticker">
+  <p class="ticker-text">
+    وزیراعظم شہباز شریف کا پیٹرول کی قیمت میں فی لیٹر 80 روپے کمی کا اعلان
+
+  </p>
+</div>
+
 
 <!-- Sidebar for mobile/tablet only -->
 <aside class="geo-sidebar" id="mobileSidebar">
