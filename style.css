@@ -702,16 +702,10 @@ body, html {
   }
 }
 
-
-
-
-
-
-
 .news-ticker {
   background: #eee;
   overflow: hidden;
-  height: 30px;
+  height: 40px;
   display: flex;
   align-items: center;
   position: relative;
@@ -721,6 +715,7 @@ body, html {
   position: absolute;
   white-space: nowrap;
   animation: moveText 25s linear infinite;
+  margin-top: 18px;
 }
 
 /* 🔥 RIGHT se LEFT aur phir repeat */
