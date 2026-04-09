@@ -235,3 +235,18 @@ if (menuBtn && sidebar && overlay) {
     overlay.classList.remove("visible");
   });
 }
+
+
+
+function updateDate() {
+  const now = new Date();
+  document.getElementById("time").innerText =
+    now.toLocaleDateString('ur-PK', {
+      weekday: 'long',
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric'
+    });
+}
+
+updateDate();
